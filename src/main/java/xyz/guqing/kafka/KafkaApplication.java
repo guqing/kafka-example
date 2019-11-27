@@ -2,6 +2,7 @@ package xyz.guqing.kafka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * @author guqing
@@ -14,4 +15,8 @@ public class KafkaApplication {
         SpringApplication.run(KafkaApplication.class, args);
     }
 
+    @GetMapping("/test")
+    public String test() {
+        return "hello world";
+    }
 }
